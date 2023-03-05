@@ -20,7 +20,7 @@ if os.environ.get('DISPLAY','') == '':
     mpl.use('Agg')
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
-plt.rcParams['font.family'] = ['Noto Sans CJK', 'DejaVu Sans']
+plt.rcParams['font.family'] = ['Noto Sans CJK', 'DejaVu Sans','sans-serif']
 
 # open the input path
 with open(args.input_path) as f:
@@ -43,8 +43,9 @@ for k,v in items:
 #plt.rcParams['font.family'] = ['Noto Sans CJK', 'DejaVu Sans'] 
 
 # top 10
-items_top = items[-10:]
+items_top = items[:10]
 x,y = zip(*items_top)
+print(x,y)
 
 # English or Korean
 if args.input_path == "reduced.country":
@@ -60,12 +61,12 @@ else:
 # plot
 
 plt.bar(range(len(x)), y, color = "blue", width = 0.5)
-print(x, len(x), range(len(x)))
+#print(x, len(x), range(len(x)))
 plt.xticks(range(len(x)),x)
 #plt.xticklabels(x)
 plt.xlabel(category)
 plt.ylabel("Count of Tweets")
-plt.title("Number of" + language + "Tweet including" + args.key + "in" + category)
+plt.title("Number of " + language + " Tweet including " + args.key + " in " + category)
 #plt.legend()
 
 plt.savefig(f"{language}_{category}.png")
