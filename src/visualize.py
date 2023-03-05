@@ -13,6 +13,15 @@ import os
 import json
 from collections import Counter,defaultdict
 
+# import matlap
+import matplotlib as mpl
+if os.environ.get('DISPLAY','') == '':
+    print('no display found. Using non-interactive Agg backend')
+    mpl.use('Agg')
+import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
+plt.rcParams['font.family'] = ['Noto Sans CJK', 'DejaVu Sans']
+
 # open the input path
 with open(args.input_path) as f:
     counts = json.load(f)
@@ -26,3 +35,44 @@ if args.percent:
 items = sorted(counts[args.key].items(), key=lambda item: (item[1],item[0]), reverse=True)
 for k,v in items:
     print(k,':',v)
+
+# import matlap
+#import matplotlib
+#import matplotlib.pyplot as plt
+#import matplotlib.font_manager as fm
+#plt.rcParams['font.family'] = ['Noto Sans CJK', 'DejaVu Sans'] 
+
+# top 10
+items_top = items[-10:]
+x,y = zip(*items_top)
+
+# English or Korean
+if args.input_path == "reduced.country":
+    category = "country"
+else:
+    category = "language"
+
+if args.key == "#coronavirus":
+    language = "English"
+else:
+    language = "Korean"
+
+# plot
+
+plt.bar(range(len(x)), y, color = "blue", width = 0.5)
+#plt.set_xticks(range(len(x))
+#plt.set_xticklabels(y)
+plt.xlabel(category)
+plt.ylabel("Count of Tweets")
+plt.title("Number of" + language + "Tweet including" + args.key + "in" + category)
+#plt.legend()
+
+plt.savefig(f"{language}_{category}.png")
+
+try:
+    plt.savefig(f"{language}_{category}.png")
+except:
+    print("error")
+
+# The horizontal axis of the graph should be the keys of the input file, only need to include the top 10 keys.
+
