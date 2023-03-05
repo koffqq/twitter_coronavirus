@@ -60,6 +60,7 @@ else:
 
 # plot
 
+
 barplot = plt.bar(range(len(x)), y, color = "blue", width = 0.5)
 #print(x, len(x), range(len(x)))
 plt.xticks(range(len(x)),x)
