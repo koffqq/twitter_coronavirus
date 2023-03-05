@@ -182,7 +182,7 @@ This explanation should be suitable for a future employer to look at while they 
 
 The statistics of the occurence of each language's hashtag for corona virus, in all tweets from 2020, are analyzed by `./run_maps.sh` and stored in the `./outputs` file. This homework analyzed the count of each hashtag in different languages and different countries.In order to visualize the results, outputs for each category are reduced separately into a single file `./reduced.lang` and `./reduced.country` by running the `reduced.py` file. To demonstrate the result of this homework project, I generated graphs to visualise the total number of occurrences for English and Korean hashtags. Graphs are stored in the `graphs` folder.
 
-A. tweets in different languages
+A. Tweets in different languages
   
 Two graphs show separatly the count of `#coronavirus` and `#코로나바이러스` in the *top 10 languages*. 
 
@@ -192,7 +192,7 @@ The following graph shows that tweets including `#coronavirus` appears the most 
 <img src=graphs/English_language.png width=100% />
 <img src=graphs/Korean_language.png width=100% />
 
-B. tweets in different countries
+B. Tweets in different countries
   
 Two graphs show separatly the count of `#coronavirus` and `#코로나바이러스` in the *top 10 countries*. 
 
