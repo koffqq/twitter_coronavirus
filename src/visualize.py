@@ -43,7 +43,7 @@ for k,v in items:
 #plt.rcParams['font.family'] = ['Noto Sans CJK', 'DejaVu Sans'] 
 
 # top 10
-items_top = items[:10]
+items_top = sorted(items[:10], key=lambda x: x[1], reverse = False)
 x,y = zip(*items_top)
 print(x,y)
 
@@ -71,11 +71,12 @@ plt.title("Number of " + language + " Tweet including " + args.key + " in " + ca
 
 plt.savefig(f"{language}_{category}.png")
 
-plt.show()
-try:
-    plt.savefig(f"{language}_{category}.png")
-except:
-    print("error")
+#plt.show()
+#try:
+ #   plt.savefig(f"{language}_{category}.png")
+#except:
+ #   print("error")
 
 # The horizontal axis of the graph should be the keys of the input file, only need to include the top 10 keys.
-
+# display Korean
+# print(matplotlib.matplotlib_fname())
