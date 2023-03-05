@@ -66,7 +66,7 @@ plt.xticks(range(len(x)),x)
 #plt.xticklabels(x)
 plt.xlabel(category)
 plt.ylabel("Count of Tweets")
-plt.title("Number of " + language + " Tweet including " + args.key + " in " + category)
+plt.title("Number of Tweet including " + language + " covid hashtag in different " + category)
 for rect in barplot:
     height = rect.get_height()
     plt.text(rect.get_x() + rect.get_width() / 2.0, height, f'{height:.0f}', ha='center', va='bottom')
