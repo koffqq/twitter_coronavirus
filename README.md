@@ -180,22 +180,24 @@ This explanation should be suitable for a future employer to look at while they 
 
 ## Result and Discussion
 
-The statistics of the occurence of each language's hashtag for corona virus, in all tweets from 2020, are analyzed by `./run_maps.sh` and stored in the `./outputs` file. This homework analyzed the count of each hashtag in different languages and different countries.In order to visualize the results, outputs for each category are reduced separately into a single file `./reduced.lang` and `./reduced.country` by running the `reduced.py` file. To demonstrate the result of this homework project, I generated graphs to visualise the total number of occurrences for English and Korean hashtags. Graphs are stored in `graphs` folder.
+The statistics of the occurence of each language's hashtag for corona virus, in all tweets from 2020, are analyzed by `./run_maps.sh` and stored in the `./outputs` file. This homework analyzed the count of each hashtag in different languages and different countries.In order to visualize the results, outputs for each category are reduced separately into a single file `./reduced.lang` and `./reduced.country` by running the `reduced.py` file. To demonstrate the result of this homework project, I generated graphs to visualise the total number of occurrences for English and Korean hashtags. Graphs are stored in the `graphs` folder.
 
-2. tweets in different languages
+A. tweets in different languages
   
 Two graphs show separatly the count of `#coronavirus` and `#코로나바이러스` in the *top 10 languages*. 
 
 **Discussion**
+
 The following graph shows that tweets including `#coronavirus` appears the most times in tweet written in English, and hashtag `#코로나바이러스` appears the most times in tweets written in Korean. Only tweets written in *9* languages contains hashtag `#코로나바이러스` therefore the barplot only includes 9 bars. Overall, hashtag `#coronavirus`appears more times than `#코로나바이러스`. The exact count is labeled on top of each bar.      
 <img src=graphs/English_language.png width=100% />
 <img src=graphs/Korean_language.png width=100% />
 
-2. tweets in different countries
+B. tweets in different countries
   
 Two graphs show separatly the count of `#coronavirus` and `#코로나바이러스` in the *top 10 countries*. 
 
 **Discussion**
+
 The following graph shows that tweets including `#coronavirus` appears the most times in tweet posted in the United States, and hashtag `#코로나바이러스` appears the most times in tweets posted in Korea. Overall, hashtag `#coronavirus`appears more times than `#코로나바이러스`. The exact count is labeled on top of each bar.    
 <img src=graphs/English_country.png width=100% />
 <img src=graphs/Korean_country.png width=100% />
