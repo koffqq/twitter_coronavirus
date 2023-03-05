@@ -60,8 +60,9 @@ else:
 # plot
 
 plt.bar(range(len(x)), y, color = "blue", width = 0.5)
-#plt.set_xticks(range(len(x))
-#plt.set_xticklabels(y)
+print(x, len(x), range(len(x)))
+plt.xticks(range(len(x)),x)
+#plt.xticklabels(x)
 plt.xlabel(category)
 plt.ylabel("Count of Tweets")
 plt.title("Number of" + language + "Tweet including" + args.key + "in" + category)
@@ -69,6 +70,7 @@ plt.title("Number of" + language + "Tweet including" + args.key + "in" + categor
 
 plt.savefig(f"{language}_{category}.png")
 
+plt.show()
 try:
     plt.savefig(f"{language}_{category}.png")
 except:
