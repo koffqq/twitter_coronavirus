@@ -33,8 +33,8 @@ if args.percent:
 
 # print the count values
 items = sorted(counts[args.key].items(), key=lambda item: (item[1],item[0]), reverse=True)
-for k,v in items:
-    print(k,':',v)
+#for k,v in items:
+#    print(k,':',v)
 
 # import matlap
 #import matplotlib
@@ -45,7 +45,7 @@ for k,v in items:
 # top 10
 items_top = sorted(items[:10], key=lambda x: x[1], reverse = False)
 x,y = zip(*items_top)
-print(x,y)
+#print(x,y)
 
 # English or Korean
 if args.input_path == "reduced.country":
@@ -60,13 +60,16 @@ else:
 
 # plot
 
-plt.bar(range(len(x)), y, color = "blue", width = 0.5)
+barplot = plt.bar(range(len(x)), y, color = "blue", width = 0.5)
 #print(x, len(x), range(len(x)))
 plt.xticks(range(len(x)),x)
 #plt.xticklabels(x)
 plt.xlabel(category)
 plt.ylabel("Count of Tweets")
 plt.title("Number of " + language + " Tweet including " + args.key + " in " + category)
+for rect in barplot:
+    height = rect.get_height()
+    plt.text(rect.get_x() + rect.get_width() / 2.0, height, f'{height:.0f}', ha='center', va='bottom')
 #plt.legend()
 
 plt.savefig(f"{language}_{category}.png")

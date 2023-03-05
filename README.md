@@ -170,6 +170,21 @@ Complete the following tasks:
     This explanation should be suitable for a future employer to look at while they are interviewing you to get a rough idea of what you accomplished.
     (And you should tell them about this in your interviews!)
 
+1. Commit all of your code and visualization output files to your github repo and push the results to github.
+    You must edit the `README.md` file to provide a brief explanation of your results.
+    This explanation should be suitable for a future employer to look at while they are interviewing you to get a rough idea of what you accomplished.
+    (And you should tell them about this in your interviews!)
+
+## Result and Discussion
+
+a. tweets in language 
+<img src=English_language.png width=100% />
+<img src=Korean_language.png width=100% /> 
+
+
+
+
+
 ## Submission
 
 Upload a link to you github repository on sakai.
